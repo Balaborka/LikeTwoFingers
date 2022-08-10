@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: white; 
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      #DFB0A8 0%,
+      #DFB0A8 50%,
+      #E35951 50%,
+      #E35951 100%
+    );
+    display: flex;
+    justify-content: center;
+  }
+.header {
+    background-color: coral;
+    padding: 20px;
+}
+.activeForm {
+  margin-top: calc(20vh);
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+.mainItem {
+  height: 45px;
+  background: #FFFFFF;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  border-color: transparent;
+  color: black;
+  vertical-align: auto;
+  padding: 0px 20px;
+}
+input:focus{
+  outline: none;
+}
+.dish {
+  margin-bottom: 10px;
+}
+.dish span {
+  color: #E35951;
+  vertical-align: middle;
+}
+.dish:hover {
+  background: #15D7A8;
+  opacity: .8;
+  cursor: pointer;
+}
+.dish:hover span {
+  color: #FFFFFF;
+}
+.dish:active {
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+}
