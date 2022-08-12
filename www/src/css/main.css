@@ -25,7 +25,7 @@ body{
     padding: 20px;
 }
 .activeForm {
-  margin-top: calc(20vh);
+  margin-top: calc(10vh);
   margin-left: auto;
   margin-right: auto;
   width: auto;
@@ -33,9 +33,8 @@ body{
 .mainItem {
   height: 45px;
   background: #FFFFFF;
-  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
-  margin-bottom: 40px;
+  margin-bottom: calc(10vh);
   border-color: transparent;
   color: black;
   vertical-align: auto;
@@ -54,11 +53,65 @@ input:focus{
 .dish:hover {
   background: #15D7A8;
   opacity: .8;
-  cursor: pointer;
 }
 .dish:hover span {
   color: #FFFFFF;
 }
-.dish:active {
+.mealNameLabel {
+  font-size: 48px;
+  margin-bottom: calc(20vh);
+  text-align: center;
+}
+.shadow {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+.shadow:active {
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+}
+.shadow:hover {
+  cursor: pointer;
+}
+.productsCookItButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.itemButton {
+  width: 150px;
+  height: 60px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.headerButtons {
+  margin-top: calc(5vh);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.headerButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftHeaderButton {
+  margin-right: 80px;
+}
+.rightHeaderButton {
+  margin-left: 80px;
+}
+.leftButton {
+  background-color: #E35951;
+}
+.rightButton {
+  background-color: #DFB0A8;
+}
+a {
+  text-decoration: none;
 }

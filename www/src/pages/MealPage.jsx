@@ -1,14 +1,30 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import Data from "../data/Dishes.json"
+import { Routes, Route, Link } from "react-router-dom"
 
 function MealPage() {
-    let { mealName } = useParams();
-    let currentMeal = Data.find(el => el.name == mealName);
+    let { mealId } = useParams();
+    let currentMeal = Data.find(el => el.id == mealId);
     return (
         <div>
-            <div>{mealName}</div>
-            <div>{currentMeal.id}</div>
+            <div className="headerButtons">
+                <Link to={"/"}>
+                    <div className="leftButton leftHeaderButton headerButton backHeaderButton shadow">{"<"}</div>
+                </Link>
+                <div className="rightButton rightHeaderButton headerButton removeHeaderButton shadow">{"-"}</div>
+            </div>
+            <div className="activeForm">
+                <div className="mealNameLabel">{currentMeal.name}</div>
+                <div className="productsCookItButtons">
+                    <div className="itemButton leftButton productsButton shadow">
+                        <span>Products</span>
+                    </div>
+                    <div className="itemButton rightButton cookItButton shadow">
+                        <span>Cook it!</span>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

@@ -11,14 +11,19 @@ class HomePage extends React.Component {
 
     render() {
         return (
-            <div className="activeForm">
-                <input 
-                    className="mainItem" 
-                    placeholder="Search" 
-                    onChange={e => this.setState({ searchText: e.target.value.toLowerCase() })}/>
-                <main>
-                    <Dishes searchBy={this.state.searchText} />
-                </main>
+            <div>
+                <div className="headerButtons">
+                    <div className="leftButton leftHeaderButton headerButton addHeaderButton shadow">{"+"}</div>
+                </div>
+                <div className="activeForm">
+                    <input 
+                        className="mainItem" 
+                        placeholder="Search" 
+                        onChange={e => this.setState({ searchText: e.target.value.toLowerCase() })}/>
+                    <main>
+                        <Dishes searchBy={this.state.searchText} />
+                    </main>
+                </div>
             </div>
         )
     }

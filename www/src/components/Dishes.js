@@ -1,6 +1,5 @@
 import React from "react"
 import { Routes, Route, Link } from "react-router-dom"
-import MealPage from '../pages/MealPage'
 import Data from "../data/Dishes.json"
 
 class Dishes extends React.Component {
@@ -21,8 +20,8 @@ class Dishes extends React.Component {
             return (
                 <div>
                     {filteredData.map((el) => (
-                        <Link to={"/MealPage/" + el.name} key={el.id}>
-                            <div className="dish mainItem" key={el.id}>
+                        <Link to={"/MealPage/" + el.id} key={el.id}>
+                            <div className="dish mainItem shadow" key={el.id}>
                                 <span key={el.id}>{el.name}</span>
                             </div>
                         </Link>   
