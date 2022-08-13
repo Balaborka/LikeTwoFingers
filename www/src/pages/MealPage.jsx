@@ -17,9 +17,11 @@ function MealPage() {
             <div className="activeForm">
                 <div className="mealNameLabel">{currentMeal.name}</div>
                 <div className="productsCookItButtons">
-                    <div className="itemButton leftButton productsButton shadow">
-                        <span>Products</span>
-                    </div>
+                    <Link to={"/ProductsPage/" + currentMeal.id} key={currentMeal.id}>
+                        <div className="itemButton leftButton productsButton shadow">
+                            <span>Products</span>
+                        </div>
+                    </Link>
                     <div className="itemButton rightButton cookItButton shadow">
                         <span>Cook it!</span>
                     </div>
