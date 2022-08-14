@@ -12,7 +12,7 @@ function MealPage() {
                 <Link to={"/"}>
                     <div className="leftButton leftHeaderButton headerButton backHeaderButton shadow">{"<"}</div>
                 </Link>
-                <div className="rightButton rightHeaderButton headerButton removeHeaderButton shadow">{"-"}</div>
+                {/* <div className="rightButton rightHeaderButton headerButton removeHeaderButton shadow">{"-"}</div> */}
             </div>
             <div className="activeForm">
                 <div className="mealNameLabel">{currentMeal.name}</div>
