@@ -66,10 +66,10 @@ input:focus{
   margin-bottom: calc(5vh);
 }
 .shadow {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
 }
 .shadow:active {
-  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: none;
 }
 .shadow:hover {
   cursor: pointer;
@@ -129,4 +129,15 @@ a {
 .product span {
   color: #E35951;
   vertical-align: middle;
+}
+.checkedProduct {
+  background-color: #15D7A8;
+  opacity: .8;
+  box-shadow: none;
+}
+.checkedProduct:active {
+  box-shadow: none;
+}
+.checkedProduct span {
+  color: #FFFFFF;
 }

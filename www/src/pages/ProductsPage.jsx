@@ -1,12 +1,18 @@
 import React, { useState } from "react"
 import { useParams } from "react-router-dom"
 import Data from "../data/Dishes.json"
+import Product from "../components/Product.js";
 import { Routes, Route, Link } from "react-router-dom"
 
 function ProductsPage() {
     let { mealId } = useParams();
-    const [checked, setChecked] = useState([]);
     let currentMeal = Data.find(el => el.id == mealId);
+
+    // const [checked, setChecked] = useState([]);
+    // const checkList = [];
+    // const handleClick = event => {
+    //     setChecked(current => !current);
+    // };
     return (
         <div>
             <div className="headerButtons">
@@ -19,9 +25,11 @@ function ProductsPage() {
                 <div className="mealNameLabel mealNameLabelOnProductsPage">{currentMeal.name}</div>
                 <div className="productsList">
                     {currentMeal.ingredients.map((el) => (
-                        <div className="product mainItem shadow" key={el.id}>
-                            <span key={el.id}>{el.name + "   " + el.count}</span>
-                        </div>
+                        // <span key={el.id}>{el.name}</span>
+                        <Product product={el} key={el.id} />
+                        // <div className={checked ? 'product mainItem checkedProduct shadow' : 'product mainItem shadow'} key={el.id} onClick={handleClick}>
+                        //     <span key={el.id}>{el.name + "   " + el.count}</span>
+                        // </div>
                     ))}
                 </div>
             </div>
