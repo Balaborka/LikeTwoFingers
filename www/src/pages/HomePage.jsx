@@ -13,7 +13,7 @@ class HomePage extends React.Component {
         return (
             <div>
                 <div className="headerButtons">
-                    <div className="leftButton leftHeaderButton headerButton addHeaderButton shadow">{"+"}</div>
+                    {/* <div className="leftButton leftHeaderButton headerButton addHeaderButton shadow">{"+"}</div> */}
                 </div>
                 <div className="activeForm">
                     <input 
