@@ -2,6 +2,7 @@ import React from "react"
 import { useParams } from "react-router-dom"
 import Data from "../data/Dishes.json"
 import { Routes, Route, Link } from "react-router-dom"
+import style from "./Header.module.css"
 
 function MealPage() {
     let { mealId } = useParams();
@@ -10,7 +11,7 @@ function MealPage() {
         <div>
             <div className="headerButtons">
                 <Link to={"/"}>
-                    <div className="leftButton leftHeaderButton headerButton backHeaderButton shadow">{"<"}</div>
+                    <div className={`leftButton leftHeaderButton ${style.headerButton} backHeaderButton shadow`}>{"<"}</div>
                 </Link>
                 {/* <div className="rightButton rightHeaderButton headerButton removeHeaderButton shadow">{"-"}</div> */}
             </div>
