@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom"
 import style from "./Header.module.css"
 import { useState, useEffect } from "react"
 
-function MealPage() {
+function StepPage() {
     let { mealId } = useParams();
     let currentMeal = Data.find(el => el.id == mealId);
     let [currentStep, setCurrentStep] = useState(0);  
@@ -49,4 +49,4 @@ function MealPage() {
     )
 }
 
-export default MealPage
+export default StepPage
