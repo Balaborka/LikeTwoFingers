@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import Data from "../data/Dishes.json"
 import Product from "../components/Product.js";
 import { Routes, Route, Link } from "react-router-dom"
+import style from "./Header.module.css"
 
 function ProductsPage() {
     let { mealId } = useParams();
@@ -10,11 +11,13 @@ function ProductsPage() {
 
     return (
         <div>
-            <div className="headerButtons">
-                <Link to={"../MealPage/" + currentMeal.id} key={currentMeal.id}>
-                    <div className="leftButton leftHeaderButton headerButton backHeaderButton shadow">{"<"}</div>
+            <div className={`${style.headerButtons}`}>
+                <Link to={"../MealPage/" + currentMeal.id}>
+                    <button className={`leftButton ${style.leftHeaderButton} ${style.headerButton} shadow`}>{"<"}</button>
                 </Link>
-                <div className="rightButton rightHeaderButton headerButton cookItHeaderButton shadow">Cook it!</div>
+                <Link to={"../StepPage/" + currentMeal.id}>
+                    <button className={`rightButton ${style.rightHeaderButton} ${style.headerButton} ${style.cookItHeaderButton} shadow`}>Cook it!</button>
+                </Link>
             </div>
             <div className="activeForm">
                 <div className="mealNameLabel mealNameLabelOnProductsPage">{currentMeal.name}</div>

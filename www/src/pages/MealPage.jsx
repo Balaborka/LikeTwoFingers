@@ -9,23 +9,25 @@ function MealPage() {
     let currentMeal = Data.find(el => el.id == mealId);
     return (
         <div>
-            <div className="headerButtons">
+            <div className={`${style.headerButtons}`}>
                 <Link to={"/"}>
-                    <div className={`leftButton leftHeaderButton ${style.headerButton} backHeaderButton shadow`}>{"<"}</div>
+                    <button className={`leftButton ${style.leftHeaderButton} ${style.headerButton} shadow`}>{"<"}</button>
                 </Link>
-                {/* <div className="rightButton rightHeaderButton headerButton removeHeaderButton shadow">{"-"}</div> */}
+                {/* <button className={`rightButton ${style.rightHeaderButton} ${style.headerButton} shadow`}>{"-"}</button> */}
             </div>
             <div className="activeForm">
                 <div className="mealNameLabel">{currentMeal.name}</div>
                 <div className="productsCookItButtons">
-                    <Link to={"/ProductsPage/" + currentMeal.id} key={currentMeal.id}>
-                        <div className="itemButton leftButton productsButton shadow">
+                    <Link to={"../ProductsPage/" + currentMeal.id}>
+                        <button className="itemButton leftButton productsButton shadow">
                             <span>Products</span>
-                        </div>
+                        </button>
                     </Link>
-                    <div className="itemButton rightButton cookItButton shadow">
-                        <span>Cook it!</span>
-                    </div>
+                    <Link to={"../StepPage/" + currentMeal.id}>
+                        <button className="itemButton rightButton cookItButton shadow">
+                            <span>Cook it!</span>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
