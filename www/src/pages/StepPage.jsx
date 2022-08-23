@@ -14,15 +14,15 @@ function StepPage() {
 
     const handleLeftHeaderClick = (e) => {
         setIsLastStep(false);
-        setCurrentStep(currentStep--)
-        if(currentStep == 0) {
+        setCurrentStep(currentStep => currentStep - 1)
+        if(currentStep == 1) {
             setIsFirstStep(true);
         }
     }
     const handleRightHeaderClick = (e) => {
         setIsFirstStep(false);
-        setCurrentStep(currentStep++)
-        if(currentStep == currentMeal.steps.length - 1) {
+        setCurrentStep(currentStep => currentStep + 1)
+        if(currentStep == currentMeal.steps.length - 2) {
             setIsLastStep(true);
         }
     }
