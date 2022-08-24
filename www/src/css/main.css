@@ -119,3 +119,6 @@ a {
 .stepTextArea {
   background-color: rgba(0, 0, 0, .1);
 }
+.finishButton {
+  margin-top: calc(25vh);
+}

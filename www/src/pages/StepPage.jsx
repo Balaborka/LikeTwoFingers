@@ -45,6 +45,9 @@ function StepPage() {
                     <span>{currentMeal.steps[currentStep].text}</span>
                 </div>
             </div>
+            <Link to={"../"}>
+                <button className="itemButton finishButton leftButton shadow">Finish</button>
+            </Link>
         </div>
     )
 }
